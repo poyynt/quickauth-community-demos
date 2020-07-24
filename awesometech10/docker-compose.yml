@@ -1,0 +1,15 @@
+version: "3.4"
+
+services:
+  main:
+    build: .
+    restart: always
+    ports:
+      - 3011:3000
+    expose:
+      - 3011
+    environment:
+      - "VIRTUAL_PORT=3011"
+      - "VIRTUAL_HOST=allesauth.trevorthalacker.me"
+      - "LETSENCRYPT_EMAIL=webmaster@trevorthalacker.me"
+      - "LETSENCRYPT_HOST=trevorthalacker.me"
